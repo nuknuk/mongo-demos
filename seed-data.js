@@ -1,3 +1,23 @@
+// Script for adding some data to a blank database so that you can play.
+// Not a reccomendation for modeling documents! Use at your own peril
+
+use playground;
+
+print("try: man()");
+
+function man(){
+	print("reset() - wipe data");
+	print("addCustomers() - add customers. Creates collectin 'crm' ");
+	print("addOrderHistory() - add order history to customers ");
+	print("addScores() = add flat team score docs. Creates collection 'scores'");
+}
+
+function reset(){ 
+	db.crm.drop();
+	db.scores.drop();
+}
+
+
 function addCustomers(){
 	customers.forEach(
 		function(c){
